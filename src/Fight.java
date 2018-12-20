@@ -2,13 +2,13 @@ import playerClass.Player;
 
 import java.util.Scanner;
 
-public class Fight {
+class Fight {
 
     /**
      * Run the attacking process each turn
      *
-     * @param attackingPlayer
-     * @param attackedPlayer
+     * @param attackingPlayer self explanatory
+     * @param attackedPlayer self explanatory
      */
     void fight(Player attackingPlayer, Player attackedPlayer){
 

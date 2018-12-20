@@ -5,7 +5,7 @@ import playerClass.Warrior;
 
 import java.util.Scanner;
 
-public class GamePlay {
+class GamePlay {
 
     private final static String classType = "Veuillez choisir la classe de votre joueur (1: Warrior, 2: Rôdeur, 3: Mage)";
     private final static String askStats = " du player ?";
@@ -36,9 +36,9 @@ public class GamePlay {
     /**
      * Ask input between min and max
      * until it's ok
-     * @param min
-     * @param max
-     * @param question
+     * @param min self explanatory
+     * @param max self explanatory
+     * @param question self explanatory
      * @return player's choice
      */
     private int numInput(int min, int max, String question){
@@ -56,7 +56,7 @@ public class GamePlay {
     /**
      * Run player's creation
      *
-     * @param name
+     * @param name self explanatory
      * @return player
      */
     Player creation(String name){

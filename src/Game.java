@@ -1,6 +1,6 @@
 import playerClass.Player;
 
-public class Game {
+class Game {
 
     // run the process for each intance
     Game() {
@@ -26,7 +26,7 @@ public class Game {
     /**
      * Run the gameplay process configuration
      *
-     * @param player
+     * @param player self explanatory
      * @return Player
      */
     private Player configure(String player){
@@ -42,8 +42,8 @@ public class Game {
     /**
      * Run a turned base death match between 2 players
      *
-     * @param player1
-     * @param player2
+     * @param player1 self explanatory
+     * @param player2 self explanatory
      * @return winner
      */
     private String deathMatch(Player player1, Player player2) {
