@@ -32,7 +32,7 @@ class Game {
     private Player configure(String player){
         GamePlay gameplay = new GamePlay();
         player = gameplay.askName(player);
-        gameplay.askPLayerStats();
+        gameplay.askPlayerStats();
         return gameplay.creation(player);
     }
 

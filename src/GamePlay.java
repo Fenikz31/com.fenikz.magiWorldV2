@@ -8,27 +8,27 @@ import java.util.Scanner;
 class GamePlay {
 
     private final static String classType = "Veuillez choisir la classe de votre joueur (1: Warrior, 2: Rôdeur, 3: Mage)";
-    private final static String askStats = " du player ?";
+    private final static String askStats = " du joueur ?";
 
     //Stats at -1 to avoid stats < 0
-    private int playerclass, level, force, intelligence, agility = -1;
+    private int playerClass, level, force, intelligence, agility = -1;
 
 
     /**
      * stats input unless int < min or int > max
      */
-    void askPLayerStats(){
+    void askPlayerStats(){
         int maxPlayerClass = 3;
         int minPlayerClass = 1;
-        int maxLevel = 1000;
+        int maxLevel = 100;
         int minLevel = 1;
-        int charstats = 0;
+        int charStats = 0;
 
-        playerclass = numInput(minPlayerClass, maxPlayerClass, classType);
+        playerClass = numInput(minPlayerClass, maxPlayerClass, classType);
         level = numInput(minLevel, maxLevel, "Niveau" + askStats);
-        force = numInput(charstats, level, "Force" + askStats);
-        intelligence = numInput(charstats, level - force, "Intelligence" + askStats);
-        agility = numInput(charstats, level - force - intelligence, "Agilité" + askStats);
+        force = numInput(charStats, level, "Force" + askStats);
+        intelligence = numInput(charStats, level - force, "Intelligence" + askStats);
+        agility = numInput(charStats, level - force - intelligence, "Agilité" + askStats);
     }
 
 
@@ -63,7 +63,7 @@ class GamePlay {
         //player's stats are null
 
         //input player's stats are then applied
-        switch (playerclass) {
+        switch (playerClass) {
             case 1:
                 return new Warrior(level, force, intelligence, agility, name);
             case 2:
@@ -81,9 +81,7 @@ class GamePlay {
 
 
     /**
-     * Demande simplement un name au joueur pour
-     * la création de son player
-     *
+     * Ask the player's name for creation
      * @param numPlayer - player 1 or 2
      * @return name entered
      */

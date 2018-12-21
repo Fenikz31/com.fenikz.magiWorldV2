@@ -2,11 +2,11 @@ package playerClass;
 
 public abstract class Player {
 
-        private int level;
-        int vitality;
-        private int force;
-        private int intelligence;
-        int agility;
+        protected int level;
+        protected int vitality;
+        protected int force;
+        protected int intelligence;
+        protected int agility;
 
         private String name;
 
@@ -18,7 +18,7 @@ public abstract class Player {
          * @param name - player's name
          */
         Player(int level, int force, int intelligence, int agility, String name) {
-            this.level = level;
+            this.level = force + agility + intelligence;
             this.vitality = level*5;
             this.force = force;
             this.intelligence = intelligence;

@@ -2,8 +2,8 @@ package playerClass;
 
 public class Warrior extends Player{
 
-    public Warrior(int level, int force, int intelligence, int agilite, String nom) {
-        super(level, force, intelligence, agilite, nom);
+    public Warrior(int level, int force, int intelligence, int agilite, String name) {
+        super(level, force, intelligence, agilite, name);
         System.out.println("Groaw !!! je suis un Guerrier de level " + level +
                 " avec " + this.getVitality() + " de vitalité \n");
 
