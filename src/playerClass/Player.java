@@ -57,7 +57,7 @@ public abstract class Player {
          *
          * @return player's lvl
          */
-        int getLevel() {
+        public int getLevel() {
             return level;
         }
 
@@ -74,7 +74,7 @@ public abstract class Player {
          *
          * @return strenghth
          */
-        int getForce() {
+        public int getForce() {
             return force;
         }
 
@@ -84,7 +84,7 @@ public abstract class Player {
          *
          * @return intelligence
          */
-        int getIntelligence() {
+        public int getIntelligence() {
             return intelligence;
         }
 
@@ -93,7 +93,7 @@ public abstract class Player {
          *
          * @return agilty
          */
-        int getAgility() {
+        public int getAgility() {
             return agility;
         }
 

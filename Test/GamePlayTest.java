@@ -2,32 +2,23 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import playerClass.Mage;
-import playerClass.Player;
 import playerClass.Warrior;
 
-
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.util.ArrayList;
-import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class GamePlayTest {
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-    private List<Player> playerList = new ArrayList<>();
     private int sum = 0;
-    int i;
 
     @BeforeEach
-    public void setUpStreams() {
+    void setUpStreams() {
         System.setOut(new PrintStream(outContent));
     }
 
     @AfterEach
-    public void restoreStreams() {
+    void restoreStreams() {
         System.setOut(System.out);
     }
 
@@ -35,14 +26,25 @@ class GamePlayTest {
      * Test of player's creation
      */
     @Test
-    public void testCreation() {
+    void positiveTestCreation() {
         System.out.println("test de la création du joueur");
-
-        playerList.add(new Warrior(50,35, 10, 5, "Guerrier"));
-        // sum force, agility and intelligence
-        // test if the sum equals level
-
+        Warrior testWarrior = new Warrior(50,35,15,0,"Guerrier");
+        sum = testWarrior.getForce() + testWarrior.getIntelligence() + testWarrior.getAgility();// sum force, agility and intelligence
+        if (sum != testWarrior.getLevel()) {
+            System.out.println("La somme de la force, de l'intelligence et de la agilité est différent du niveau");
+        }
+        else { System.out.println("La somme de la force, de l'intelligence et de la agilité est égale au niveau");
+        }
     }
 
-
+    @Test
+    void negativeTestCreation() {
+        Mage testMage = new Mage(20,50,10,45,"Mage");
+        sum = testMage.getForce() + testMage.getIntelligence() + testMage.getAgility();
+        if (sum != testMage.getLevel()) {
+            System.out.println("La somme de la force, de l'intelligence et de la agilité est égale au niveau");
+        }
+        else { System.out.println("La somme de la force, de l'intelligence et de la agilité est différent du niveau");
+        }
+    }
 }
